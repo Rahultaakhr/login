@@ -23,7 +23,7 @@ function Signup() {
              createUserWithEmailAndPassword(auth, value.email, value.password).then(async(res) => {
                 console.log(res.user);
             await    updateProfile(res.user,{displayName:value.name})
-                setError('')
+               
             }).catch((error) => {
                 setError("Error" + error.message)
             })
